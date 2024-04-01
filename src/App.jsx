@@ -3,10 +3,7 @@ import "./RainbowText.css";
 import Porfile from "./assets/Photo.png";
 import Project1 from "./assets/project1.png";
 import Project2 from "./assets/project2.png";
-import Project3 from "./assets/project3.png";
-import Project4 from "./assets/project4.png";
 import ArrowDown from "./assets/arrow-down.svg";
-import Github from "./assets/github.svg";
 import { useEffect, useState } from "react";
 import { FaSun, FaMoon } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
@@ -87,7 +84,7 @@ function App() {
             <div>
               <h1
                 className={`font-bold text-2xl ${
-                  theme === "dark" ? "text-white" : "text-blue-800"
+                  theme === "dark" ? "text-cyan-500" : "text-cyan-500"
                 }`}
               >
                 Portfolio
@@ -98,7 +95,7 @@ function App() {
               <button
                 onClick={() => setMenuOpen(!menuOpen)}
                 className={`font-bold text-2xl ${
-                  theme === "dark" ? "text-white" : "text-gray-800"
+                  theme === "dark" ? "text-white" : "text-cyan-500"
                 }`}
               >
                 {menuOpen ? "Close" : "Menu"}
@@ -293,7 +290,7 @@ function App() {
         {/* Projects section */}
         <section id="projects">
           <div className="container m-auto px-4 sm:py-12">
-            <h2 className="text-2xl font-semibold">Projects</h2>
+            <h2 className="text-2xl font-semibold text-cyan-500">Projects</h2>
             <div className="flex flex-col sm:flex-row gap-10 mt-11">
               <div className="border border-gray-500 rounded-md p-5 flex-1">
                 <img src={Project1} className="w-full h-auto" />
@@ -329,7 +326,7 @@ function App() {
               </div>
               <div className="border border-gray-500 rounded-md p-5 flex-1">
                 <img src={Project2} className="w-full h-auto" />
-                <h3 className="text-2xl font-semibold mt-8">Portfolio</h3>
+                <h3 className="text-2xl font-semibold mt-8 ">Portfolio</h3>
                 <p className="text-gray-400 text-sm mt-2">
                   Responsive HTML/CSS layout for My Portfolio, Reactjs
                 </p>
@@ -362,7 +359,7 @@ function App() {
         {/* Technoglies section */}
         <section className="py-10" id="technologies">
           <div className="container m-auto px-4">
-            <h2 className="text-2xl font-semibold">Technologies</h2>
+            <h2 className="text-2xl font-semibold text-cyan-500">Technologies</h2>
 
             <div className="mt-14">
               <div>
@@ -506,7 +503,7 @@ function App() {
         </section>
         <section className="py-8" id="aboutme">
           <div className="container m-auto px-4">
-            <h2 className="text-2xl font-semibold">About me</h2>
+            <h2 className="text-2xl font-semibold text-cyan-500">About me</h2>
             <div className="mt-12 relative before:absolute before:top-0 before:left-16 before:rounded-full before:bottom-10 sm:before:bottom-2 before:w-1 before:bg-white">
               <div className="pl-24 relative before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:absolute before:rounded-full before:left-[58px]">
                 <h3 className="absolute left-0 text-lg font-semibold">2020</h3>
@@ -560,7 +557,7 @@ function App() {
         </section>
         <section id="hireme">
           <div className="container m-auto px-4 py-8">
-            <h2 className="text-2xl font-semibold">Hire Me</h2>
+            <h2 className="text-2xl font-semibold text-cyan-500">Hire Me</h2>
             <p className="mt-4 text-gray-400 typewriter-text">
               If you are interested in discussing a job opportunity with me,
               feel free to reach out via email.
