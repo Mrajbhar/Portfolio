@@ -1,4 +1,5 @@
 import "./App.css";
+import "./RainbowText.css";
 import Porfile from "./assets/Photo.png";
 import Project1 from "./assets/project1.png";
 import Project2 from "./assets/project2.png";
@@ -12,9 +13,13 @@ import { FaGithub } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
+import { SiLeetcode } from "react-icons/si";
+import { FaHackerrank } from "react-icons/fa";
+
 
 function App() {
   const [scrolling, setScrolling] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const [theme, setTheme] = useState(() => {
     // Retrieve theme preference from local storage, defaulting to "light" if not available
@@ -67,7 +72,107 @@ function App() {
 
   return (
     <div className="max-w-4xl m-auto relative">
-      <header
+      <nav
+        className={`${
+          scrolling ? "border-b border-gray-900" : ""
+        } fixed left-0 right-0 top-0 z-20`}
+        id="home"
+      >
+        <div
+          className={`container m-auto px-4 py-6 max-w-4xl ${
+            theme === "dark" ? "bg-black" : "bg-white"
+          }`}
+        >
+          <div className="flex justify-between items-center">
+            <div>
+              <h1
+                className={`font-bold text-2xl ${
+                  theme === "dark" ? "text-white" : "text-gray-800"
+                }`}
+              >
+                Mohan Portfolio
+              </h1>
+              
+            </div>
+            <div className="sm:hidden">
+              <button
+                onClick={() => setMenuOpen(!menuOpen)}
+                className={`font-bold text-2xl ${
+                  theme === "dark" ? "text-white" : "text-gray-800"
+                }`}
+              >
+                {menuOpen ? "Close" : "Menu"}
+              </button>
+            </div>
+            <div
+              className={`sm:flex flex-grow items-center justify-end ${
+                menuOpen ? "block" : "hidden"
+              }`}
+            >
+              <ul className="flex flex-col sm:flex-row gap-4">
+                <li>
+                  <a
+                    href="#projects"
+                    className={`text-gray-400 hover:text-white cursor-pointer ${
+                      theme === "dark"
+                        ? "hover:text-gray-300"
+                        : "hover:text-gray-900"
+                    }`}
+                  >
+                    Projects
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#technologies"
+                    className={`text-gray-400 hover:text-white cursor-pointer ${
+                      theme === "dark"
+                        ? "hover:text-gray-300"
+                        : "hover:text-gray-900"
+                    }`}
+                  >
+                    Technologies
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#aboutme"
+                    className={`text-gray-400 hover:text-white cursor-pointer ${
+                      theme === "dark"
+                        ? "hover:text-gray-300"
+                        : "hover:text-gray-900"
+                    }`}
+                  >
+                    About me
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#hireme"
+                    className={`text-gray-400 hover:text-white cursor-pointer ${
+                      theme === "dark"
+                        ? "hover:text-gray-300"
+                        : "hover:text-gray-900"
+                    }`}
+                  >
+                    Contact
+                  </a>
+                </li>
+                <li>
+                  <button
+                    onClick={toggleTheme}
+                    className="text-gray-400 hover:text-white focus:outline-none"
+                  >
+                    {theme === "light" ? <FaMoon /> : <FaSun />}
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      {/* <header
         className={`${
           scrolling ? "border-b border-gray-900" : ""
         }  fixed left-0 right-0 top-0 z-20`}
@@ -123,55 +228,68 @@ function App() {
             </div>
           </div>
         </div>
-      </header>
+      </header> */}
 
       <main className="relative mt-28">
         {/* Intro/Banner section */}
         <section>
-          <div className="container m-auto px-4 pt-12 pb-12 sm:pt-20 flex flex-col sm:flex-row gap-6 text-center sm:text-left">
-            <div>
-              <h2 className="font-bold text-4xl">Hello, I'm Mohan Rajbhar,</h2>
-              <div>
-                <h2 className="font-bold text-4xl mt-1 gradiant-text">
-                  FullStack developer
-                </h2>
-              </div>
-              <div>
-                <p className="mt-4 text-gray-400">
-                  As a Full Stack Developer, I bring a comprehensive skill set
-                  that covers both front-end and back-end development. My
-                  expertise lies in crafting seamless user experiences and
-                  robust server-side applications. With a passion for coding and
-                  problem-solving, I deliver end-to-end solutions that drive
-                  business success. Let’s build the future of web technology
-                  together
-                </p>
-                <a
-                  href="https://drive.google.com/file/d/1LjUolJwqZ51ZYsZmXLq0B2pqO2HWHPZp/view?usp=drive_link"
-                  download
-                >
-                  <button className="px-8 shadow-gray-500 shadow-md py-5 mt-5 bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700">
-                    Download resume
-                  </button>
-                </a>
-              </div>
-            </div>
-            <div className="relative">
-              {/* <div className="after:bg-[url('./large-long.png')] after:bg-contain after:block after:bg-no-repeat after:w-[420px] after:h-[320px] after:absolute after:top-0 after:-left-20 sm:after:-left-40 before:bg-[url('./small.png')] before:bg-contain before:block before:bg-no-repeat before:w-[220px] before:h-[220px] before:absolute before:bottom-0 before:-right-10">
-                <img
-                  src={Porfile}
-                  className="relative z-10 w-[280px] m-auto sm:w-[600px]"
-                />
-              </div> */}
-              <div className="profile-container after:bg-[url('./large-long.png')] after:bg-contain after:block after:bg-no-repeat after:w-[420px] after:h-[320px] after:absolute after:top-0 after:-left-20 sm:after:-left-40 before:bg-[url('./small.png')] before:bg-contain before:block before:bg-no-repeat before:w-[220px] before:h-[220px] before:absolute before:bottom-0 before:-right-10">
-                <img
-                  src={Porfile}
-                  className="relative z-10 w-[280px] m-auto sm:w-[600px]"
-                />
-              </div>
-            </div>
-          </div>
-        </section>
+  <div className="container m-auto px-4 pt-12 pb-12 sm:pt-20 flex flex-col sm:flex-row gap-6 text-center sm:text-left">
+    <div>
+      <h2 className="font-bold text-4xl rainbow-text">
+        Hello, I'm Mohan Rajbhar,
+      </h2>
+      <div>
+        <h2 className="font-bold text-4xl mt-1 gradiant-text">
+          FullStack developer
+        </h2>
+      </div>
+      <div>
+        <p className="mt-4 text-gray-400">
+          As a Full Stack Developer, I bring a comprehensive skill set
+          that covers both front-end and back-end development. My
+          expertise lies in crafting seamless user experiences and
+          robust server-side applications. With a passion for coding and
+          problem-solving, I deliver end-to-end solutions that drive
+          business success. Let’s build the future of web technology
+          together
+        </p>
+        <div className="mt-4 flex justify-center sm:justify-start">
+          <a href="https://www.linkedin.com/in/mohan-rajbhar/" target="_blank" rel="noopener noreferrer" className="mr-4">
+            <FaLinkedin size={32} />
+          </a>
+          <a href="https://github.com/Mrajbhar" target="_blank" rel="noopener noreferrer" className="mr-4">
+            <FaGithub size={32} />
+          </a>
+          <a href="https://leetcode.com/user6413eN/" target="_blank" rel="noopener noreferrer" className="mr-4">
+            <SiLeetcode  size={32} />
+          </a>
+          <a href="https://www.hackerrank.com/profile/m_rajbhar1235" target="_blank" rel="noopener noreferrer" className="mr-4">
+            <FaHackerrank size={32} />
+          </a>
+        </div>
+        <a
+          href="https://drive.google.com/uc?export=download&id=1LjUolJwqZ51ZYsZmXLq0B2pqO2HWHPZp"
+          download
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <button className="px-8 shadow-gray-500 shadow-md py-5 mt-5 bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700">
+            Download resume
+          </button>
+        </a>
+      </div>
+    </div>
+    <div className="relative">
+      <div className="profile-container after:bg-[url('./large-long.png')] after:bg-contain after:block after:bg-no-repeat after:w-[420px] after:h-[320px] after:absolute after:top-0 after:-left-20 sm:after:-left-40 before:bg-[url('./small.png')] before:bg-contain before:block before:bg-no-repeat before:w-[220px] before:h-[220px] before:absolute before:bottom-0 before:-right-10">
+        <img
+          src={Porfile}
+          className="relative z-10 w-[280px] m-auto sm:w-[600px]"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
         {/* Projects section */}
         <section id="projects">
           <div className="container m-auto px-4 sm:py-12">
@@ -211,9 +329,7 @@ function App() {
               </div>
               <div className="border border-gray-500 rounded-md p-5 flex-1">
                 <img src={Project2} className="w-full h-auto" />
-                <h3 className="text-2xl font-semibold mt-8">
-                Portfolio
-                </h3>
+                <h3 className="text-2xl font-semibold mt-8">Portfolio</h3>
                 <p className="text-gray-400 text-sm mt-2">
                   Responsive HTML/CSS layout for My Portfolio, Reactjs
                 </p>
@@ -241,7 +357,6 @@ function App() {
                 </div>
               </div>
             </div>
-           
           </div>
         </section>
         {/* Technoglies section */}
@@ -483,7 +598,7 @@ function App() {
                 </a>
               </li>
               <li>
-                <a href="https://github.com">
+                <a href="https://github.com/Mrajbhar">
                   <FaGithub />
                 </a>
               </li>
