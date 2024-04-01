@@ -409,7 +409,7 @@ function App() {
         {/* Additional skills section */}
         <section>
           <div className="container m-auto px-4 py-14">
-            <h2 className="text-2xl font-semibold">
+            <h2 className="text-2xl font-semibold text-cyan-500">
               Additional technologies and skills
             </h2>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-28 mt-12 w-[80%]">
