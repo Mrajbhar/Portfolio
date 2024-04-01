@@ -110,10 +110,10 @@ function App() {
                 <li>
                   <a
                     href="#projects"
-                    className={`text-gray-400 hover:text-white cursor-pointer ${
+                    className={`font-bold text-2xl${
                       theme === "dark"
-                        ? "hover:text-gray-300"
-                        : "hover:text-gray-900"
+                        ? "hover:text-white"
+                        : "hover:text-black"
                     }`}
                   >
                     Projects
@@ -122,10 +122,10 @@ function App() {
                 <li>
                   <a
                     href="#technologies"
-                    className={`text-gray-400 hover:text-white cursor-pointer ${
+                    className={`font-bold  ${
                       theme === "dark"
-                        ? "hover:text-gray-300"
-                        : "hover:text-gray-900"
+                        ? "hover:text-white"
+                        : "hover:text-black"
                     }`}
                   >
                     Technologies
@@ -134,10 +134,10 @@ function App() {
                 <li>
                   <a
                     href="#aboutme"
-                    className={`text-gray-400 hover:text-white cursor-pointer ${
+                    className={`font-bold ${
                       theme === "dark"
-                        ? "hover:text-gray-300"
-                        : "hover:text-gray-900"
+                        ? "hover:text-white"
+                        : "hover:text-black"
                     }`}
                   >
                     About me
@@ -146,10 +146,10 @@ function App() {
                 <li>
                   <a
                     href="#hireme"
-                    className={`text-gray-400 hover:text-white cursor-pointer ${
+                    className={`font-bold ${
                       theme === "dark"
-                        ? "hover:text-gray-300"
-                        : "hover:text-gray-900"
+                        ? "hover:text-white"
+                        : "hover:text-black"
                     }`}
                   >
                     Contact
@@ -158,7 +158,7 @@ function App() {
                 <li>
                   <button
                     onClick={toggleTheme}
-                    className="text-gray-400 hover:text-white focus:outline-none"
+                    className="text-gray-600 hover:text-white focus:outline-none"
                   >
                     {theme === "light" ? <FaMoon /> : <FaSun />}
                   </button>
