@@ -1,0 +1,10 @@
+
+# Ignore files named "secret.txt" anywhere in the repository
+**/secret.txt
+
+
+dist/
+
+.env
+node_modules/
+package-lock.json
