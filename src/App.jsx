@@ -95,7 +95,7 @@ function App() {
               <button
                 onClick={() => setMenuOpen(!menuOpen)}
                 className={`font-bold text-2xl ${
-                  theme === "dark" ? "text-white" : "text-cyan-500"
+                  theme === "dark" ? "text-cyan-500" : "text-cyan-500"
                 }`}
               >
                 {menuOpen ? "Close" : "Menu"}
