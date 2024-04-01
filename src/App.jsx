@@ -87,10 +87,10 @@ function App() {
             <div>
               <h1
                 className={`font-bold text-2xl ${
-                  theme === "dark" ? "text-white" : "text-gray-800"
+                  theme === "dark" ? "text-white" : "text-blue-800"
                 }`}
               >
-                Mohan Portfolio
+                Portfolio
               </h1>
               
             </div>
