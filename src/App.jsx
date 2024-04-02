@@ -13,7 +13,6 @@ import { FaFacebook } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
 import { FaHackerrank } from "react-icons/fa";
 
-
 function App() {
   const [scrolling, setScrolling] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -89,7 +88,6 @@ function App() {
               >
                 Portfolio
               </h1>
-              
             </div>
             <div className="sm:hidden">
               <button
@@ -111,9 +109,7 @@ function App() {
                   <a
                     href="#projects"
                     className={`font-bold text-2xl${
-                      theme === "dark"
-                        ? "hover:text-white"
-                        : "hover:text-black"
+                      theme === "dark" ? "hover:text-white" : "hover:text-black"
                     }`}
                   >
                     Projects
@@ -123,9 +119,7 @@ function App() {
                   <a
                     href="#technologies"
                     className={`font-bold  ${
-                      theme === "dark"
-                        ? "hover:text-white"
-                        : "hover:text-black"
+                      theme === "dark" ? "hover:text-white" : "hover:text-black"
                     }`}
                   >
                     Technologies
@@ -135,9 +129,7 @@ function App() {
                   <a
                     href="#aboutme"
                     className={`font-bold ${
-                      theme === "dark"
-                        ? "hover:text-white"
-                        : "hover:text-black"
+                      theme === "dark" ? "hover:text-white" : "hover:text-black"
                     }`}
                   >
                     About me
@@ -147,24 +139,21 @@ function App() {
                   <a
                     href="#hireme"
                     className={`font-bold ${
-                      theme === "dark"
-                        ? "hover:text-white"
-                        : "hover:text-black"
+                      theme === "dark" ? "hover:text-white" : "hover:text-black"
                     }`}
                   >
                     Contact
                   </a>
                 </li>
-                <li>
-                  <button
-                    onClick={toggleTheme}
-                    className="text-gray-600 hover:text-white focus:outline-none"
-                  >
-                    {theme === "light" ? <FaMoon /> : <FaSun />}
-                  </button>
-                </li>
+                <li></li>
               </ul>
             </div>
+            <button
+              onClick={toggleTheme}
+              className="text-gray-600 hover:text-white focus:outline-none"
+            >
+              {theme === "light" ? <FaMoon size={20} /> : <FaSun size={20} />}
+            </button>
           </div>
         </div>
       </nav>
@@ -172,60 +161,79 @@ function App() {
       <main className="relative mt-28">
         {/* Intro/Banner section */}
         <section>
-  <div className="container m-auto px-4 pt-12 pb-12 sm:pt-20 flex flex-col sm:flex-row gap-6 text-center sm:text-left">
-    <div>
-      <h2 className="font-bold text-4xl rainbow-text">
-        Hello, I'm Mohan Rajbhar,
-      </h2>
-      <div>
-        <h2 className="font-bold text-4xl mt-1 gradiant-text">
-          FullStack developer
-        </h2>
-      </div>
-      <div>
-        <p className="mt-4 text-gray-400">
-          As a Full Stack Developer, I bring a comprehensive skill set
-          that covers both front-end and back-end development. My
-          expertise lies in crafting seamless user experiences and
-          robust server-side applications. With a passion for coding and
-          problem-solving, I deliver end-to-end solutions that drive
-          business success. Let’s build the future of web technology
-          together
-        </p>
-        <div className="mt-4 flex justify-center sm:justify-start">
-          <a href="https://www.linkedin.com/in/mohan-rajbhar/" target="_blank" rel="noopener noreferrer" className="mr-4">
-            <FaLinkedin size={32} />
-          </a>
-          <a href="https://github.com/Mrajbhar" target="_blank" rel="noopener noreferrer" className="mr-4">
-            <FaGithub size={32} />
-          </a>
-          <a href="https://leetcode.com/user6413eN/" target="_blank" rel="noopener noreferrer" className="mr-4">
-            <SiLeetcode  size={32} />
-          </a>
-          <a href="https://www.hackerrank.com/profile/m_rajbhar1235" target="_blank" rel="noopener noreferrer" className="mr-4">
-            <FaHackerrank size={32} />
-          </a>
-        </div>
-        <a
-          href="https://drive.google.com/uc?export=download&id=1LjUolJwqZ51ZYsZmXLq0B2pqO2HWHPZp"
-          download
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <button className="px-8 shadow-gray-500 shadow-md py-5 mt-5 bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700">
-            Download resume
-          </button>
-        </a>
-      </div>
-    </div>
-    <div class="profile-container">
-  <div class="photo-container">
-    <img src={Porfile} class="profile-photo" />
-  </div>
-</div>
-
-  </div>
-</section>
+          <div className="container m-auto px-4 pt-12 pb-12 sm:pt-20 flex flex-col sm:flex-row gap-6 text-center sm:text-left">
+            <div>
+              <h2 className="font-bold text-4xl rainbow-text">
+                Hello, I'm Mohan Rajbhar,
+              </h2>
+              <div>
+                <h2 className="font-bold text-4xl mt-1 gradiant-text">
+                  FullStack developer
+                </h2>
+              </div>
+              <div>
+                <p className="mt-4 text-gray-400">
+                  As a Full Stack Developer, I bring a comprehensive skill set
+                  that covers both front-end and back-end development. My
+                  expertise lies in crafting seamless user experiences and
+                  robust server-side applications. With a passion for coding and
+                  problem-solving, I deliver end-to-end solutions that drive
+                  business success. Let’s build the future of web technology
+                  together
+                </p>
+                <div className="mt-4 flex justify-center sm:justify-start">
+                  <a
+                    href="https://www.linkedin.com/in/mohan-rajbhar/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mr-4"
+                  >
+                    <FaLinkedin size={32} />
+                  </a>
+                  <a
+                    href="https://github.com/Mrajbhar"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mr-4"
+                  >
+                    <FaGithub size={32} />
+                  </a>
+                  <a
+                    href="https://leetcode.com/user6413eN/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mr-4"
+                  >
+                    <SiLeetcode size={32} />
+                  </a>
+                  <a
+                    href="https://www.hackerrank.com/profile/m_rajbhar1235"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mr-4"
+                  >
+                    <FaHackerrank size={32} />
+                  </a>
+                </div>
+                <a
+                  href="https://drive.google.com/uc?export=download&id=1LjUolJwqZ51ZYsZmXLq0B2pqO2HWHPZp"
+                  download
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <button className="px-8 shadow-gray-500 shadow-md py-5 mt-5 bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700">
+                    Download resume
+                  </button>
+                </a>
+              </div>
+            </div>
+            <div class="profile-container">
+              <div class="photo-container">
+                <img src={Porfile} class="profile-photo" />
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* Projects section */}
         <section id="projects">
@@ -299,7 +307,9 @@ function App() {
         {/* Technoglies section */}
         <section className="py-10" id="technologies">
           <div className="container m-auto px-4">
-            <h2 className="text-2xl font-semibold text-cyan-500">Technologies</h2>
+            <h2 className="text-2xl font-semibold text-cyan-500">
+              Technologies
+            </h2>
 
             <div className="mt-14">
               <div>
