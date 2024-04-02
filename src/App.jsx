@@ -280,7 +280,7 @@ function App() {
                 </p>
                 <div className="flex mt-12 gap-2">
                   <a
-                    href="https://portfolio-pink-delta-49.vercel.app/"
+                    href="https://mohan-portfolio-react.vercel.app/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex-1 inline-block"

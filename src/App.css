@@ -50,6 +50,9 @@ body {
     }
 }
 
+
+
+
 /* Profile container styling */
 .profile-container {
     position: relative;
@@ -80,11 +83,11 @@ body {
   
   /* Define disco light effects animation */
   @keyframes disco {
-    0% { box-shadow: 0 0 100px rgba(0, 255, 255, 0.5); }
-    25% { box-shadow: 0 0 100px rgba(255, 0, 255, 0.5); }
-    50% { box-shadow: 0 0 100px rgba(0, 255, 255, 0.5); }
-    75% { box-shadow: 0 0 100px rgba(255, 255, 0, 0.5); }
-    100% { box-shadow: 0 0 100px rgba(0, 255, 255, 0.5); }
+    0% { box-shadow: 0 0 500px rgba(0, 255, 255, 0.5); }
+    25% { box-shadow: 0 0 500px rgba(255, 0, 255, 0.5); }
+    50% { box-shadow: 0 0 500px rgba(0, 255, 255, 0.5); }
+    75% { box-shadow: 0 0 500px rgba(255, 255, 0, 0.5); }
+    100% { box-shadow: 0 0 500px rgba(0, 255, 255, 0.5); }
   }
   
   
@@ -100,5 +103,39 @@ body {
     animation: disco 2s infinite;
   }
   
+
+/* Mouse pointer effects */
+
+
+/* CSS for bubble effects */
+.bubble-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.bubble-effect::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.bubble-effect:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+  transition-duration: 0.6s;
+  opacity: 0;
+}
+
+
+
+
+
+
 
 
