@@ -50,46 +50,55 @@ body {
     }
 }
 
-
-
+/* Profile container styling */
 .profile-container {
     position: relative;
+    display: inline-block;
+    width: 280px; /* Match the width of the photo */
+    height: 280px; /* Match the height of the photo */
+  }
+  
+  /* Photo container styling */
+  .photo-container {
+    position: relative;
     overflow: hidden;
-    width: 280px; /* Adjust as needed */
-    height: 280px; /* Adjust as needed */
-    border-radius: 50%; /* Makes the container round */
-    background-color: #04152A; /* Dark blue background color */
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5), inset 0 0 20px rgba(0, 0, 255, 0.5); /* Adds a subtle lighting effect and blue light inside */
-    transition: box-shadow 0.3s ease-in-out; /* Transition for hover effect */
-}
-
-.profile-container::before {
-    content: '';
+    display: inline-block;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+    width: 280px; /* Match the width of the photo */
+    height: 280px; /* Match the height of the photo */
+  }
+  
+  /* Profile photo styling */
+  .profile-photo {
+    display: block;
+    width: 100%; /* Ensure the photo fills its container */
+    height: 100%; /* Ensure the photo fills its container */
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  /* Define disco light effects animation */
+  @keyframes disco {
+    0% { box-shadow: 0 0 100px rgba(0, 255, 255, 0.5); }
+    25% { box-shadow: 0 0 100px rgba(255, 0, 255, 0.5); }
+    50% { box-shadow: 0 0 100px rgba(0, 255, 255, 0.5); }
+    75% { box-shadow: 0 0 100px rgba(255, 255, 0, 0.5); }
+    100% { box-shadow: 0 0 100px rgba(0, 255, 255, 0.5); }
+  }
+  
+  
+  /* Apply disco light effects animation */
+  .profile-container::after {
+    content: "";
     position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 300%; /* Adjust as needed */
-    height: 300%; /* Adjust as needed */
-    background: radial-gradient(circle at center, transparent 0%, rgba(0, 0, 255, 0.5) 50%, transparent 100%);
-    animation: blue-light-animation 2s infinite alternate; /* Animation for blue light effect */
-}
-
-.profile-container:hover {
-    box-shadow: 0 0 50px rgba(255, 255, 255, 0.9), inset 0 0 50px rgba(0, 0, 255, 0.9); /* Increase lighting effect and intensify the blue light inside on hover */
-}
-
-@keyframes blue-light-animation {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
-
+    top: 0; /* Adjusted to match photo container */
+    left: 0; /* Adjusted to match photo container */
+    width: 100%; /* Adjusted to match photo container */
+    height: 100%; /* Adjusted to match photo container */
+    border-radius: 50%;
+    animation: disco 2s infinite;
+  }
+  
 
 
