@@ -199,7 +199,7 @@ function App() {
                     <FaGithub size={32} />
                   </a>
                   <a
-                    href="https://leetcode.com/user6413eN/"
+                    href="https://leetcode.com/Mrajbhar/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mr-4"
