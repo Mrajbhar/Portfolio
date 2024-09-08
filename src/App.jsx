@@ -3,6 +3,7 @@ import "./RainbowText.css";
 import Porfile from "./assets/Photo.png";
 import Project1 from "./assets/project1.png";
 import Project2 from "./assets/project2.png";
+import Project3 from "./assets/project3.png";
 import ArrowDown from "./assets/arrow-down.svg";
 import { useEffect, useState } from "react";
 import { FaSun, FaMoon } from "react-icons/fa";
@@ -216,7 +217,7 @@ function App() {
                   </a>
                 </div>
                 <a
-                  href="https://drive.google.com/uc?export=download&id=19D__nUDml07ucMSfh2cVB36kUUMuXIAG"
+                  href="https://drive.google.com/uc?export=download&id=1gzlTsuCzE-bOVg9zTlHiPXp2JZ1sk_qp"
                   download
                   target="_blank"
                   rel="noopener noreferrer"
@@ -237,73 +238,114 @@ function App() {
 
         {/* Projects section */}
         <section id="projects">
-          <div className="container m-auto px-4 sm:py-12">
-            <h2 className="text-2xl font-semibold text-cyan-500">Projects</h2>
-            <div className="flex flex-col sm:flex-row gap-10 mt-11">
-              <div className="border border-gray-500 rounded-md p-5 flex-1">
-                <img src={Project1} className="w-full h-auto" />
-                <h3 className="text-2xl font-semibold mt-8">
-                  E-Commerce Application
-                </h3>
-                <p className="text-gray-400 text-sm mt-2">
-                  Responsive HTML/CSS layout for E-commerce Appliactions.
-                  Reactjs, Nodejs,Mongodb,expressjs
-                </p>
-                <div className="flex mt-12 gap-2">
-                  <a
-                    href="https://markethub-app.vercel.app/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-1 inline-block"
-                  >
-                    <button className="w-full text-sm py-3 bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700">
-                      Live preview
-                    </button>
-                  </a>
-                  <a
-                    href="https://github.com/Mrajbhar/E-Commerce_marn_stack_app"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-1 inline-block"
-                  >
-                    <button className="w-full text-sm py-3 border rounded-full hover:border-blue-500 hover:text-blue-500">
-                      Checkout GitHub
-                    </button>
-                  </a>
-                </div>
-              </div>
-              <div className="border border-gray-500 rounded-md p-5 flex-1">
-                <img src={Project2} className="w-full h-auto" />
-                <h3 className="text-2xl font-semibold mt-8 ">Portfolio</h3>
-                <p className="text-gray-400 text-sm mt-2">
-                  Responsive HTML/CSS layout for My Portfolio, Reactjs
-                </p>
-                <div className="flex mt-12 gap-2">
-                  <a
-                    href="https://mohan-portfolio-react.vercel.app/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-1 inline-block"
-                  >
-                    <button className="w-full text-sm py-3 bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700">
-                      Live preview
-                    </button>
-                  </a>
-                  <a
-                    href="https://github.com/Mrajbhar/Portfolio"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-1 inline-block"
-                  >
-                    <button className="w-full text-sm py-3 border rounded-full hover:border-blue-500 hover:text-blue-500">
-                      Checkout GitHub
-                    </button>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+  <div className="container m-auto px-4 sm:py-12">
+    <h2 className="text-2xl font-semibold text-cyan-500">Projects</h2>
+    <div className="flex flex-col sm:flex-row gap-10 mt-11">
+      {/* Project 1 */}
+      <div className="border border-gray-500 rounded-md p-5 flex-1">
+        <img src={Project1} className="w-full h-auto" />
+        <h3 className="text-2xl font-semibold mt-8">
+          E-Commerce Application
+        </h3>
+        <p className="text-gray-400 text-sm mt-2">
+          Responsive HTML/CSS layout for E-commerce Appliactions.
+          Reactjs, Nodejs, Mongodb, Expressjs
+        </p>
+        <div className="flex mt-12 gap-2">
+          <a
+            href="https://markethub-app.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-1 inline-block"
+          >
+            <button className="w-full text-sm py-3 bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700">
+              Live preview
+            </button>
+          </a>
+          <a
+            href="https://github.com/Mrajbhar/E-Commerce_marn_stack_app"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-1 inline-block"
+          >
+            <button className="w-full text-sm py-3 border rounded-full hover:border-blue-500 hover:text-blue-500">
+              Checkout GitHub
+            </button>
+          </a>
+        </div>
+      </div>
+
+ {/* Project 3 */}
+ <div className="border border-gray-500 rounded-md p-5 flex-1">
+        <img src={Project3} className="w-full h-auto" />
+        <h3 className="text-2xl font-semibold mt-8">ViewBlog</h3>
+        <p className="text-gray-400 text-sm mt-2">
+        Responsive HTML/CSS layout for ViewBlog Appliactions.
+        Reactjs, Nodejs, Mongodb, Expressjs
+        </p>
+        <div className="flex mt-12 gap-2">
+          <a
+            href="https://blog-applications.onrender.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-1 inline-block"
+          >
+            <button className="w-full text-sm py-3 bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700">
+              Live preview
+            </button>
+          </a>
+          <a
+            href="https://github.com/Mrajbhar/Blog_Applications"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-1 inline-block"
+          >
+            <button className="w-full text-sm py-3 border rounded-full hover:border-blue-500 hover:text-blue-500">
+              Checkout GitHub
+            </button>
+          </a>
+        </div>
+      </div>
+      
+
+      {/* Project 2 */}
+      <div className="border border-gray-500 rounded-md p-5 flex-1">
+        <img src={Project2} className="w-full h-auto" />
+        <h3 className="text-2xl font-semibold mt-8">Portfolio</h3>
+        <p className="text-gray-400 text-sm mt-2">
+          Responsive HTML/CSS layout for My Portfolio, Reactjs
+        </p>
+        <div className="flex mt-12 gap-2">
+          <a
+            href="https://mohan-portfolio-react.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-1 inline-block"
+          >
+            <button className="w-full text-sm py-3 bg-gradient-to-t from-blue-500 rounded-full to-cyan-500 hover:from-blue-700 hover:to-cyan-700">
+              Live preview
+            </button>
+          </a>
+          <a
+            href="https://github.com/Mrajbhar/Portfolio"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-1 inline-block"
+          >
+            <button className="w-full text-sm py-3 border rounded-full hover:border-blue-500 hover:text-blue-500">
+              Checkout GitHub
+            </button>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
         {/* Technoglies section */}
         <section className="py-10" id="technologies">
           <div className="container m-auto px-4">
