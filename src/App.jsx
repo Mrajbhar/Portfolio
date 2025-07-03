@@ -19,12 +19,12 @@ function App() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const [theme, setTheme] = useState(() => {
-    // Retrieve theme preference from local storage, defaulting to "light" if not available
+    
     return localStorage.getItem("theme") || "light";
   });
 
   const toggleTheme = () => {
-    // Toggle theme and store preference in local storage
+    
     setTheme((prevTheme) => {
       const newTheme = prevTheme === "light" ? "dark" : "light";
       localStorage.setItem("theme", newTheme);
@@ -52,18 +52,18 @@ function App() {
   }, [theme]);
 
   const handleHireMe = () => {
-    // Replace 'your.email@example.com' with your actual email address
+    
     const email = "m.rajbhar1235@gmail.com";
-    // Replace 'subject' and 'body' with your desired subject and message body
+    
     const subject = encodeURIComponent("Job Opportunity");
     const body = encodeURIComponent(
       "Hello,\n\nI am interested in discussing a job opportunity with you. Please let me know when we can connect.\n\nBest regards,\n[Your Name]"
     );
 
-    // Construct the mailto URI
+    
     const mailtoURI = `mailto:${email}?subject=${subject}&body=${body}`;
 
-    // Open default email client with pre-filled email
+    
     window.location.href = mailtoURI;
   };
 
@@ -217,7 +217,7 @@ function App() {
                   </a>
                 </div>
                 <a
-                  href="https://drive.google.com/uc?export=download&id=1TazuBcA03P2j_cxMcEmiKB0kP5kT8254"
+                  href="https://drive.google.com/uc?export=download&id=1GFAEo4lwKXxTaU9d-8izY7XB_j76xuKj"
                   download
                   target="_blank"
                   rel="noopener noreferrer"
@@ -494,59 +494,54 @@ function App() {
           </div>
         </section>
         <section className="py-8" id="aboutme">
-          <div className="container m-auto px-4">
-            <h2 className="text-2xl font-semibold text-cyan-500">About me</h2>
-            <div className="mt-12 relative before:absolute before:top-0 before:left-16 before:rounded-full before:bottom-10 sm:before:bottom-2 before:w-1 before:bg-white">
-              <div className="pl-24 relative before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:absolute before:rounded-full before:left-[58px]">
-                <h3 className="absolute left-0 text-lg font-semibold">2020</h3>
-                <p>
-                  Graduating from Mumbai University with a BSc in Computer
-                  Science, I’ve honed my analytical and technical skills. My
-                  education has equipped me with a solid foundation in both
-                  theory and practical application. I am eager to leverage my
-                  expertise in technology to solve complex problems. With a
-                  blend of academic knowledge and hands-on experience, I am
-                  prepared to tackle the challenges of the tech industry.
-                </p>
-              </div>
-              <div className="pl-24 mt-24 relative before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:absolute before:rounded-full before:left-[58px]">
-                <h3 className="absolute left-0 text-lg font-semibold">2022</h3>
-                <p>
-                  Embarking on my career journey in 2022, I joined Gretrix Pvt
-                  Ltd as a Junior Software Engineer. My role revolves around
-                  developing dynamic web applications using .NET MVC, SQL
-                  Server, and Core API. I am committed to delivering
-                  high-quality software solutions and continuously expanding my
-                  technical expertise. At Gretrix, I am not just coding; I’m
-                  shaping the future of digital solutions.
-                </p>
-              </div>
-              <div className="pl-24 mt-24 relative before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:absolute before:rounded-full before:left-[58px]">
-                <h3 className="absolute left-0 text-lg font-semibold">2024</h3>
-                <p>
-                  After eight enriching months at Gretrix Pvt Ltd , I
-                  transitioned to Osource Global Pvt Ltd, where I continue to
-                  evolve as a Full Stack Developer. My toolkit includes .NET C#,
-                  Oracle SQL, Core API, and MVC, enabling me to deliver robust
-                  and scalable solutions. My journey reflects a commitment to
-                  growth and a passion for technology. At Osource Global, I am
-                  not just coding; I’m innovating for tomorrow’s challenges.
-                </p>
-              </div>
-              <div className="pl-24 mt-24 relative before:w-4 before:h-4 before:bg-gradient-to-t before:from-blue-500 before:to-cyan-500 before:absolute before:rounded-full before:left-[58px]">
-                <h3 className="absolute left-0 text-lg font-semibold">2024</h3>
-                <p>
-                  With two years of experience as a Full Stack Developer, I’ve
-                  mastered technologies like .NET MVC, C#, Core API, SQL, and
-                  JavaScript. My journey has been marked by continuous learning
-                  and applying cutting-edge solutions to complex problems. I am
-                  dedicated to delivering high-quality, user-centric
-                  applications that drive innovation and efficiency.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
+  <div className="container mx-auto px-4">
+    <h2 className="text-2xl font-semibold text-cyan-500 mb-12">About Me</h2>
+
+    {/* Timeline */}
+    <div className="relative pl-8">
+      {/* Vertical timeline line */}
+      <div className="absolute left-6 top-0 bottom-0 w-1 bg-white rounded-full"></div>
+
+      {/* 2020 */}
+      <div className="pl-16 mb-24 relative">
+        <div className="absolute left-5 top-2 w-4 h-4 bg-gradient-to-t from-blue-500 to-cyan-500 rounded-full z-10"></div>
+        <h3 className="text-lg font-semibold mb-2">2020</h3>
+        <p>
+          Graduated from Mumbai University with a BSc in Computer Science, building a strong foundation in both theory and hands-on application of technology. Eager to solve real-world problems through innovative tech solutions.
+        </p>
+      </div>
+
+      {/* 2022 - Greytrix */}
+      <div className="pl-16 mb-24 relative">
+        <div className="absolute left-5 top-2 w-4 h-4 bg-gradient-to-t from-blue-500 to-cyan-500 rounded-full z-10"></div>
+        <h3 className="text-lg font-semibold mb-2">2022</h3>
+        <p>
+          Started my professional journey at Greytrix India Pvt Ltd as a Jr. Software Engineer. Worked on CRM projects using ASP.NET MVC, GitLab, and transitioned to Node.js and ReactJS for better performance and scalability.
+        </p>
+      </div>
+
+      {/* 2022 - 2024 - Osource */}
+      <div className="pl-16 mb-24 relative">
+        <div className="absolute left-5 top-2 w-4 h-4 bg-gradient-to-t from-blue-500 to-cyan-500 rounded-full z-10"></div>
+        <h3 className="text-lg font-semibold mb-2">2022 – 2024</h3>
+        <p>
+          Joined Osource Global Pvt Ltd as a Software Developer. Migrated legacy projects to .NET 4.8, developed RESTful APIs using .NET Core, improved load times significantly, and contributed to scalable HRMS platforms using ReactJS and Node.js.
+        </p>
+      </div>
+
+      {/* 2024 - Present - Sodel */}
+      <div className="pl-16 mb-24 relative">
+        <div className="absolute left-5 top-2 w-4 h-4 bg-gradient-to-t from-blue-500 to-cyan-500 rounded-full z-10"></div>
+        <h3 className="text-lg font-semibold mb-2">2024 – Present</h3>
+        <p>
+          Currently working at Sodel Software Solutions Pvt Ltd as a Software Engineer. Built a real-time assessment platform using .NET Core, Entity Framework, MySQL, AJAX, and jQuery. Implemented multithreading in ASP.NET, improving performance and reducing load times by 80%.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
         <section id="hireme">
           <div className="container m-auto px-4 py-8">
             <h2 className="text-2xl font-semibold text-cyan-500">Hire Me</h2>
